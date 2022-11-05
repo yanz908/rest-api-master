@@ -356,7 +356,7 @@ router.get('/asupan/random', async (req, res, next) => {
         var apikey = req.query.apikey
 		if (!apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
-        fetch(encodeURI(`https://raw.githubusercontent.com/yanz908/iame/main/cobacoba.json`))
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/random.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -501,6 +501,12 @@ router.get('/asupan/rikagusriani', async (req, res, next) => {
 }
 })
 
+
+
+
+
+
+
 // Cecan
 router.get('/cecan/random', async (req, res, next) => {
         var apikey = req.query.apikey
@@ -508,7 +514,7 @@ router.get('/cecan/random', async (req, res, next) => {
 		if (!apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
         
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/cecan/random.json`))
+        fetch(encodeURI(`https://raw.githubusercontent.com/yanz908/iame/main/cobacoba.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
