@@ -514,7 +514,7 @@ router.get('/cecan/random', async (req, res, next) => {
 		if (!apikey) return res.json(loghandler.notapikey)
         if(listkey.includes(apikey)){
         
-        fetch(encodeURI(`https://raw.githubusercontent.com/yanz908/iame/main/cobacoba.json`))
+        fetch(encodeURI(`https://raw.githubusercontent.com/yanz908/iame/main/cecan/random.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
