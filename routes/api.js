@@ -34,7 +34,7 @@ router.get('/downloader/ytplay', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notapikeyprem)
   
   if(listkeyprem.includes(apikey)){
-    fetch(encodeURI(`https://danzzapi.xyz/api/downloader/ytplay?query=${query}&apikey=danzzprem`))
+    fetch(encodeURI(`https://yanz-api-master.herokuapp.com//api/downloader/ytplay?query=${query}&apikey=danzzprem`))
     .then(response => response.json())
         .then(hasil => {
 
@@ -61,7 +61,7 @@ router.get('/downloader/ytmp3', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notapikey)
   
   if(listkey.includes(apikey)){
-    fetch(encodeURI(`https://danzzapi.xyz/api/downloader/ytmp3?url=${query}&apikey=danzz`))
+    fetch(encodeURI(`https://yanz-api-master.herokuapp.com//api/downloader/ytmp3?url=${query}&apikey=danzz`))
     .then(response => response.json())
         .then(hasil => {
 
@@ -88,7 +88,7 @@ router.get('/downloader/ytmp4', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notapikey)
   
   if(listkey.includes(apikey)){
-    fetch(encodeURI(`https://danzzapi.xyz/api/downloader/ytmp4?url=${query}&apikey=danzz`))
+    fetch(encodeURI(`https://yanz-api-master.herokuapp.com//api/downloader/ytmp4?url=${query}&apikey=danzz`))
     .then(response => response.json())
         .then(hasil => {
 
@@ -109,7 +109,7 @@ router.get('/downloader/ytmp4', async(req, res, next) => {
 
 router.get('/downloader/facebook', async (req, res, next) => {
 	var url = req.query.url
-	var apikey = req.query.apikey
+	var apikey = req.query,apikey
 	
 	if (!url) return res.json(loghandler.noturl)  
 	if (!apikey) return res.json(loghandler.notapikey)
@@ -660,7 +660,7 @@ router.get('/search/youtube', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notapikey)
   
   if(listkey.includes(apikey)){
-    fetch(encodeURI(`https://danzzapi.xyz/api/search/youtube?query=${query}&apikey=danzz`))
+    fetch(encodeURI(`https://yanz-api-master.herokuapp.com//api/search/youtube?query=${query}&apikey=danzz`))
     .then(response => response.json())
         .then(hasil => {
 
