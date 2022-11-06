@@ -294,64 +294,6 @@ router.get('/downloader/soundcloud', async (req, res, next) => {
 
 // Asupan
 
-
-
-
-
-
-
-
-
-
-
-
-
-router.get('cobacoba', async (req, res, next) => {
-        var apikey = req.query.apikey
-        
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
-        
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/random.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/image.png', data)
-        res.sendFile(__path+'/tmp/image.png')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-
 router.get('/asupan/random', async (req, res, next) => {
         var apikey = req.query.apikey
 		if (!apikey) return res.json(loghandler.notapikey)
