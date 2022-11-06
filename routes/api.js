@@ -34,7 +34,7 @@ router.get('/downloader/ytplay', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notapikeyprem)
   
   if(listkeyprem.includes(apikey)){
-    fetch(encodeURI(`https://yanz-api-master.herokuapp.com/api/downloader/ytplay?query=${query}&apikey=danzzpewm`))
+    fetch(encodeURI(`https://yanz-api-master.herokuapp.com/api/downloader/ytplay?query=${query}&apikey=danzzprem`))
     .then(response => response.json())
         .then(hasil => {
 
